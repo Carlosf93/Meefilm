@@ -2,9 +2,9 @@
 UCM Facultad de Informática - Ingeniería Web - Curso 2014/15
 
 #Autores
-Victor Delgado Fernández
-Carlos Fernández Bravo
-Alvaro Isabel Torija
+Victor Delgado Fernández,
+Carlos Fernández Bravo,
+Alvaro Isabel Torija,
 
 #Descripción
 Proyecto web de red social de películas y series.
