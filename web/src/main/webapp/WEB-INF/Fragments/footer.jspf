@@ -1,0 +1,16 @@
+ <%--
+ 	Standard header for all jsp pages in the site. Requires the following model variables to be set:
+  	- pageTitle
+  	- pageExtraCSS: additional CSS files to include (from resources/css; via link rel-stylesheet href)
+  	- pageExtraScripts: additional JS files to include (from resources/js; via script src)
+ --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+ </div>
+ <div id="pie">
+ Meefilm 2014/2015 - Victor Delgado Fernández - Carlos Fernández Bravo - Alvaro Isabel Torija
+ </div>
+ </div>
+ 
+ </body>
+ </html>

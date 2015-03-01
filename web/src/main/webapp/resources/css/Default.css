@@ -1,0 +1,470 @@
+html {
+  height:100%;
+  width: 100%;
+}
+body{
+font-family:arial;
+width: 100%;
+height: 100%;
+margin:0;
+padding:0;
+background-color: #eeeeee;
+}
+
+h1{
+    text-align: left;
+}
+
+h2{
+	margin-top:0px;
+}
+
+#cabecera {
+	position: relative;
+	width: 100%;
+	height: 60px;
+    padding-left: 20px;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    background:linear-gradient(to bottom, #666666, #333333);
+    box-sizing : border-box; 
+}
+
+#capaMadre {
+min-height: 100%;
+height: 100%;
+background-color: #EEEEFF;
+position: relative;
+margin: 0 auto; /* centrado */
+}
+
+#cuerpo {	
+ min-height: 100%;
+ margin: 0 auto;
+ width: 75%;
+ position: relative; 
+ display: block;
+ padding-bottom: 15px;
+ padding-top: 20px;
+ padding-left: 20px;
+ border-right: 1px solid black;
+ border-left: 1px solid black;
+ background: #FFFFFF;
+}
+
+#pie {
+ border-top: 1px solid black;
+ border-right: 1px solid black;
+ bottom: 0; height: 40px;
+ background:linear-gradient(to bottom, #666666, #333333);
+ text-align: left;
+ width: 100%;
+ font-size: 9px;
+ padding-top: 5px;
+ padding-left: 5px;
+ position: relative; 
+ clear: both;
+ box-sizing : border-box;
+ 
+}
+
+#botonera {
+position: relative;
+display: block;
+top: -25px;
+left: 200px;
+width: 770px;
+}
+
+#buscador {
+width: 250px;
+position: relative;
+display: block;
+top: -55px;
+right: -1000px;
+}
+
+.button{
+    background:linear-gradient(to bottom, #0b5975, #177480);
+	background-color:#2d9ac2;
+	border:1px solid #050505;
+	color:#ffffff;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 6px;
+	margin-left: 15px;
+	margin-right: 15px;
+	
+}
+
+.headbutton{
+	width: 75px;
+    background:linear-gradient(to bottom, #0b5975, #177480);
+	background-color:#2d9ac2;
+	border:1px solid #050505;
+	color:#ffffff;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 6px;
+	margin-left: 15px;
+	margin-right: 15px;
+	
+}
+
+.menubutton {
+	margin-left: 0;
+	width: 142px;
+	background:linear-gradient(to bottom, #0b5975, #177480);
+	background-color:#2d9ac2;
+	border:1px solid #050505;
+	color:#ffffff;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 6px;
+}
+
+
+.titlestyle{
+	color: brown;
+	
+}
+
+.textstyle{
+	font-style: italic;
+	
+}
+.LinkStyle{
+	color: #207cca;
+}
+
+.bloquelista {
+	border-top: 1px solid rgba(0, 0, 0, .25);
+	border-bottom: 1px solid rgba(0, 0, 0, .25);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 950px;
+	margin-top: 20px;
+}
+
+.textolista {
+	display: -webkit-inline-box;
+	vertical-align: top;
+	width: 500px;
+	
+}
+
+.titulolista {
+	font-family: fantasy;
+	font-size: 20px;
+	border-bottom: 1px solid black;
+	padding-bottom: 10px;
+}
+
+.sinopsislista {
+	font-size: 15px;
+}
+
+.generoslista {
+	font-size: 15px;
+	border-top: 1px solid black;
+	padding-top: 10px;
+	margin-top: 20px;
+}
+
+.useravatar{
+    display: inline-block;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    background-color: #DDDDDD;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.peliculaC{
+    display: inline-block;
+	border: 1px solid black;
+	width: 100px;
+	height: 150px;
+	background-color: #DDDDDD;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 11px;
+	text-align: center;
+}
+
+#areaReg {
+	text-align: left;
+	width: 500px;
+}
+
+.fspanel {
+	margin-top: 20px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.comentario {
+	background: lightgray;
+	width: 100%;
+	display: -webkit-inline-box;
+	border: 1px solid black;
+	margin-top: 10px;
+	padding: 5px;
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+
+.rellenaform{
+	font-family: monospace;
+}
+
+.formsmallbox{
+	width: 75px;
+	height: 17px;
+	font-size: 12px;
+}
+
+.container{
+	display: inline-block;
+    width: 720px;
+	height: 100%;
+    margin: 20px; 
+}
+
+.panel{
+    height: 100%;
+    display: inline-block;
+    overflow: auto;
+}
+
+.userarea {
+	padding-left: 10px;
+	width: 160px;
+	height: 235px;
+	margin-top: 19px;
+	display: inline-block;
+}
+
+.userzone {
+	width: 100%;
+	display: flex;
+	
+}
+.tituloperfil {
+	color: cadetblue;
+	font-family: fantasy;
+	font-size: 50px;
+	margin-left: 10px;
+	margin-bottom: -5px;
+	margin-top: 25px;
+}
+
+#imagenP{
+	border: 1px solid black;
+	width:140px;
+	height: 200px;	
+}
+
+#imagenU{
+	border: 1px solid black;
+	width:100px;
+	height: 100px;	
+}
+
+#logo{
+	
+	height: 30px;
+	width: 150px;
+	
+}
+
+.CuadroHome{
+	width: 700px;
+	height: auto;
+	border: 1px solid black;
+}
+
+.CuadroHomeTitulo{
+	width:100%;
+	height: 40px;
+	background:linear-gradient(to bottom, #888888, #555555);
+	border-bottom: 1px solid black;
+	padding-top: 5px;
+}
+
+.CuadroHomeContenido{
+	padding: 20px;
+	height: auto;
+}
+
+#LoginBox{
+	position: absolute;
+	width: 275px;
+	height: auto;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	border-left: 1px solid black;
+	padding: 5px;
+	right: 0px;
+	z-index: 1;
+	background: lightgrey;
+}
+
+#LoginBox fieldset {
+	border: none;
+}
+
+#mapa {
+	border: 1px solid black;
+	width: 600px;
+	height: 600px;
+}
+
+.tg  {
+	border-collapse:collapse;
+	border-spacing:0;
+
+}
+.tg td{
+	font-size:14px;
+	padding:10px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+}
+.tg th{
+	font-size:14px;
+	font-weight:normal;
+	padding:10px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+}
+.tg .tg-e3zv{
+	font-weight:bold;
+}
+
+#register-form label.error{
+	color: red;
+}
+#registerPelicula-form label.error{
+	color: red;
+}
+#registerSerie-form label.error{
+	color: red;
+}
+
+.msjbutton {
+	background: lightgray;
+	width: 700px;
+	border: 1px solid black;
+	text-align: left;
+}
+
+.frbutton {
+	width: 100%;
+	border: 1px solid black;
+	padding: 5px;
+	background: lightgray;
+}
+
+.msjbox {
+	display:none;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	width: 678px;
+	padding: 10px;
+}
+
+.msjtitulo {
+	font-weight: bold;
+}
+
+.tempbutton {
+	background: cadetblue;
+	font-family: monospace;
+	width: 75%;
+	text-align: left;
+	padding-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.tempdiv {
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	font-family: initial;
+	font-size: 15px;
+	border: 1px solid black;
+	width: 75%;
+	display: block;
+	margin-bottom: 30px;
+}
+
+.commentdiv {
+	border: 1px solid black;
+	padding: 5px;
+}
+
+table.users {
+	border: 1px solid black;
+	font-size: small;
+	background: cadetblue;
+}
+
+table.users td {
+	border: 1px solid black;
+	margin: 0;
+	padding: 5px;
+	background: white;
+}
+
+.white_content {
+        display: none;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 50%;
+        height: 50%;
+        padding: 16px;
+        border: 1px solid black;
+        background-color: white;
+        z-index:1002;
+        overflow: auto;
+    }
+
+.ui-tabs { 
+    background: transparent; 
+    border: none; 
+} 
+.ui-tabs .ui-widget-header { 
+    background: transparent; 
+    border: none; 
+    border-bottom: 1px solid #c0c0c0; 
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    border-radius: 0px; 
+} 
+.ui-tabs .ui-tabs-nav .ui-state-default { 
+    background: transparent; 
+    border: none; 
+} 
+.ui-tabs .ui-tabs-nav .ui-state-active { 
+    background: transparent url(img/uiTabsArrow.png) no-repeat bottom center; 
+    border: none; 
+} 
+.ui-tabs .ui-tabs-nav .ui-state-default a { 
+    color: #c0c0c0; 
+} 
+.ui-tabs .ui-tabs-nav .ui-state-active a { 
+    color: cadetblue; 
+}

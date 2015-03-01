@@ -1,0 +1,114 @@
+ <%--
+ 	Standard header for all jsp pages in the site. Requires the following model variables to be set:
+  	- pageTitle
+  	- pageExtraCSS: additional CSS files to include (from resources/css; via link rel-stylesheet href)
+  	- pageExtraScripts: additional JS files to include (from resources/js; via script src)
+  	- prefix: useful to back-trace if path-based url parameters are in use
+ --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="https://www.owasp.org/index.php/OWASP_Java_Encoder_Project" prefix="e" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<c:import url="../views/peliculas"></c:import>
+<c:import url="../views/series"></c:import>
+<c:import url="../views/perfil"></c:import>
+<c:import url="../views/quedadas"></c:import>
+<c:import url="../views/registro"></c:import>
+<c:import url="../views/users"></c:import>
+<c:import url="../views/administrador"></c:import>
+<link id="estilo" rel="stylesheet" type="text/css" href="resources/css/Default.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css">
+  
+<script>
+$(function(){
+	$( "#buscaBox" ).autocomplete({
+    	source: "buscaIncremental",
+    	minLength: 2,
+    	select: function( event, ui ) {
+    		window.location.replace(ui.item.id)
+    	}
+	});
+});
+</script>
+<link rel="shortcut icon" type="image/png" href="resources/img/favicon.png"/>
+
+</head>
+
+<body>
+<title>${pageTitle}</title>
+
+
+<div id="capaMadre">
+
+<div id="cabecera">
+	<div id="logo"><a href="home"><img src="resources/img/logo.png" style="width: 100%; height: 100%"></img><a></div> 
+	<div id="botonera">
+    	<a href="home"><button class="headbutton"> Inicio </button></a>
+    	<a href="peliculas"><button class="headbutton"> Peliculas </button></a>
+    	<a href="series"><button class="headbutton"> Series </button></a>
+    	<a href="users"><button class="headbutton"> Usuarios </button></a>
+    	<a href="quedadas"><button class="headbutton"> Quedadas </button></a>
+    	<c:choose>
+			<c:when test="${not empty user}">
+    			<a href="perfil"><button class="headbutton"> Mi perfil </button></a>
+    		</c:when>
+		</c:choose>
+    </div>
+    <div id="buscador">
+    	Buscar: <input id="buscaBox" type="text" name="Buscar"/>
+	</div>
+</div>
+
+ <div id="LoginBox">
+ 	<c:choose>
+	<c:when test="${not empty user}">
+		
+		<div style="width: 75px; height: 75px; border: 1px solid black; display:inline-block;">
+			<img src="user/photo?id=${user.id}" style="width: 100%; height: 100%;">
+		</div>
+		<div id="benu" style="display: inline-block;">
+		<b>${user.login}</b><br>
+		<a href="bandejaentrada?u=${e:forHtmlContent(user.id)}"><span>Bandeja de entrada</span></a><br>
+		<a href="modificarperfil">Modificar perfil</a>
+		</div><br>
+				<a href="bandejaentrada?u=${e:forHtmlContent(user.id)}">
+					<span style="font-family: monospace">
+					<script>var m =${sessionScope.user.mensajesNoLeidos()}
+							if (m > 0)
+							document.write("- " + m + " mensajes sin leer.");</script></span>
+				</a><br>
+				<span style="font-family: monospace">
+				<a href="bandejaentrada?u=${e:forHtmlContent(user.id)}#tabs-2">
+					<script>var p =${sessionScope.user.peticionesNoLeidas()}
+							if (p > 0)
+							document.write("- " + p + " peticiones de amistad pendientes.");</script>
+				</a></span>
+				
+		<br><br>
+		<a href="logout">Cerrar sesión</a>
+	</c:when>
+	<c:otherwise>
+	<form action="login" id="formularioLogin" method="POST">
+		<fieldset>
+			<label for="login">Login</label><br>
+			<input type="hidden" id="source" name="source" 
+				value="${requestScope['javax.servlet.forward.servlet_path']}"/>
+			<input type="text" id="login" name="login" placeholder="Nombre de usuario"/>
+			<input type="password" id="pass" name="pass" placeholder="Contraseña"/><br>
+			<button name="submit" value="login" type="submit">Entrar</button>
+			<a href="registro">Registrarse</a>
+			<c:if test="${not empty loginError}">
+				<br><span class='errorLogin'>Login o contraseña incorrectos</span>
+			</c:if>
+		</fieldset>
+	</form>
+	</c:otherwise>
+	</c:choose>
+ </div>
+ <div id="cuerpo">
